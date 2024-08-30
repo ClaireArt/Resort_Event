@@ -1,0 +1,195 @@
+form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 70px;
+    top: 50px;
+    gap: 30px;
+}
+
+.full_name_div {
+    display: flex;
+    gap: 50px;
+}
+
+textarea {
+    width: 270px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF66;
+    resize: none;
+    color: #19CE15;
+    offset: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder,
+.name-inp>input::placeholder,
+.email-inp>input::placeholder,
+.num-inp>input::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+.register_btn_div{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register_num_div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register_num{
+    display: flex; 
+    gap: 10px; 
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.register_text{
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.register_btn {
+    width: 120px;
+    height: 40px;
+    background-color: #19CE15;
+    color: white;
+    border: none;
+    box-shadow: 0 0 5px 1px #19CE15;
+}
+
+.register_btn:hover {
+    color: white;
+    background-color: #19CE15;
+    transition: background-color 700ms linear;
+}
+
+.name-inp>input,
+.email-inp>input,
+.num-inp>input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF66;
+    width: 270px;
+    height: 30px;
+    color: #19CE15;
+    font-style: italic;
+}
+
+.name-inp>input:focus,
+.email-inp>input:focus,
+.num-inp>input:focus {
+    outline: none;
+}
+
+.name-inp>p,
+.email-inp>p,
+.num-inp>p {
+    color: #19CE15;
+    margin: 3px 0 0 0;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.success{
+    font-size: 12px;
+    color: #19CE15;
+}
+
+/* ---------------------------response------------------------- */
+
+@media screen and (max-width:430px) {
+
+    .name-inp>input,
+    .email-inp>input,
+    .num-inp>input {
+        width: 80px;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    textarea {
+        width: 280px;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    form {
+        left: 20px;
+    }
+
+    .name-inp>p,
+    .email-inp>p,
+    .num-inp>p {
+        font-size: 8px;
+        font-style: italic;
+    }
+
+    textarea::placeholder,
+    .name-inp>input::placeholder,
+    .email-inp>input::placeholder,
+    .num-inp>input::placeholder {
+        color: white;
+    }
+
+    .full_name_div {
+        flex-direction: column;
+    }
+
+    .name-inp>input,
+    .email-inp>input,
+    .num-inp>input {
+        width: 280px;
+    }
+
+    .register_btn{
+        margin-left: 40px;
+    }
+
+    form{
+        left: 40px
+    }
+}
+
+@media screen and (min-width:431px) and (max-width:940px) {
+
+    .name-inp>input,
+    .email-inp>input,
+    .num-inp>input {
+        width: 280px;
+        height: 50px;
+    }
+
+    textarea {
+        width: 280px;
+        height: 80px;
+    }
+    form{
+        left: 60px
+    }
+
+    
+}
+
+
+@media(max-width: 900px) {
+   .register_btn_div {
+       flex-direction: column;
+   }
+   .contact {
+    height: 540px;
+   }
+}

@@ -1,0 +1,140 @@
+.main_gallery {
+    width: 100%;
+    background-color: #3737373B;
+    height: 500px;
+    margin-bottom:60px;
+}
+
+.main_gallery_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 90px;
+    padding: 20px;
+}
+
+.gallery_img {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery_img>div:first-child {
+    max-width: 605px;
+    animation: gallery_1 1.5s ease-in-out;
+    box-shadow: 0px 0px 80px 40px #18ce1541;
+    height: 378px;
+}
+
+@keyframes gallery_1 {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery_img>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery_img>div:last-child>div {
+    max-width: 315px;
+    height: 177px;
+    box-shadow: 0px 0px 80px 40px #18ce1541;
+    animation: gallery_2_3 1.5s ease-in-out;
+}
+
+@keyframes gallery_2_3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main_gallery_content>h1 {
+    color: #19CE15;
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 0 0 400px;
+    animation: gallery_text 2.5s ease-in-out;
+    font-family: 'global-font';
+    letter-spacing: 1px;
+}
+
+@keyframes gallery_text {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ---------------------------response------------------------- */
+
+@media screen and (max-width:980px) {
+    .gallery_img {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .main_gallery {
+        height: 700px;
+        padding: 20px;
+    }
+
+    .main_gallery_content {
+        text-align: center;
+    }
+
+    .main_gallery_content>h1 {
+        margin: 0;
+    }
+
+    .gallery_img>div:first-child {
+        max-width: 320px;
+        height: 150px;
+    }
+
+    .gallery_img>div:last-child>div {
+        max-width: 420px;
+        height: 140px;
+    }
+
+    .gallery_img>div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    @keyframes gallery_2_3 {
+        0% {
+            opacity: 0;
+            transform: translateY(-50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .main_gallery_content>h1 {
+        font-size: 48px;
+    }
+}

@@ -1,0 +1,156 @@
+.header {
+    width: 100%;
+    height: 750px;
+    padding-top: 150px;
+}
+
+.logo {
+    max-width: 179px;
+    position: absolute;
+    top: -100px;
+    /* left: 100px; */
+    left: 50%;
+    margin-left: -95px;
+    animation: logo 2.5s ease-in-out;
+    box-shadow: 0px 0px 80px 40px #18ce1541;
+    height: 179px;
+}
+
+@keyframes logo {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid #19CE15; */
+    width: 610px;
+    height: 500px;
+    color: white;
+    gap: 12px;
+    padding: 25px;
+    padding-top: 200px;
+    position: relative;
+    animation: header_content 1.5s ease-in-out;
+    background-position: center;
+}
+
+@keyframes header_content {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header_text {
+    font-size: 90px;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    min-width: 800px;
+    letter-spacing: 1px;
+    animation: logo_text 2s ease-in-out;
+    font-family: 'global-font';
+    text-align: center;
+}
+
+.dress_code{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.arrow {
+    animation: arrowAnim  .5s linear infinite;
+    
+}
+@keyframes logo_text {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header_content>span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header_content>span:last-of-type {
+    font-size: 20px;
+    max-width: 300px;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* --------------------------------------response---------------------------------------------------------- */
+@media screen and (max-width:600px) {
+    .header_content {
+        width: 330px;
+    }
+
+    .header_text {
+        font-size: 35px;
+        top: 150px;
+        left: 5px;
+        min-width: 320px;
+    }
+
+    .header_content>span {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1000px) {
+    .header_content {
+        width: 500px;
+    }
+
+    .header_text {
+        font-size: 60px;
+        top: 100px;
+        left: -20px;
+        min-width: 550px;
+    }
+}
+
+
+@keyframes arrowAnim {
+    0%, 100% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+.arrow {
+    animation: arrowAnim 0.7s linear infinite;
+}
